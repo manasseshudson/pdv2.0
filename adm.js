@@ -455,8 +455,8 @@ router.get('/adm/principal/:uid_usuario', async (req, res) => {
       knex('vwVlrTotalRecebido').where({ id_empresa }).select()
     ]);
 
-    const total_receber = receber?.valor_receber || '0';
-    const total_recebido = recebido?.valor_recebido || '0';
+    const total_receber = receber.valor_receber || '0';
+    const total_recebido = recebido.valor_recebido || '0';
 
     /* =======================
        BOLETOS DASHBOARD
